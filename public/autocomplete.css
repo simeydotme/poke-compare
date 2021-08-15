@@ -1,0 +1,118 @@
+.panel {
+  --height: 36px;
+  --inputColor: white;
+  --background: #24272f;
+  --listBackground: var(--background);
+  --border: 1px solid transparent;
+  --borderHoverColor: rgba(0, 0, 0, 0.4);
+  --borderFocusColor: rgba(255, 255, 255, 0.4);
+  --itemHoverBG: rgba(0, 0, 0, 0.1);
+  --itemIsActiveBG: rgba(0, 0, 0, 0.4);
+
+  --listMaxHeight: 220px;
+
+  transition: all 0.3s ease;
+}
+
+.autopoke,
+.autopoke > input {
+  font-family: pkmn2, sans-serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  width: auto;
+  display: block;
+  box-sizing: content-box;
+  flex: 1 1 auto;
+  position: relative;
+  z-index: 20;
+  background: #8a909f30;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.autopoke > input {
+  background: transparent;
+  color: white;
+  padding: 5px;
+  width: calc(100% - 32px) !important;
+}
+
+.autopoke .listContainer {
+  text-align: left;
+}
+
+.autopoke .selectedItem {
+  overflow: hidden;
+}
+
+.autopoke .selection,
+.autopoke .item {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.autopoke .selection img,
+.autopoke .item img {
+  position: relative;
+  top: -2px;
+  left: -5px;
+}
+
+.autopoke.focused input:focus + .selectedItem {
+  opacity: 0.4;
+}
+
+/* .autopoke > input:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.autopoke[class*="svelte"] .autopoke-list[class*="svelte"] {
+  background: #333844;
+  z-index: 1000;
+  overflow: auto;
+  box-sizing: border-box;
+  border: 1px solid rgba(50, 50, 50, 0.6);
+  height: 230px !important;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.autopoke[class*="svelte"] .autopoke-list[class*="svelte"] * {
+  font: inherit;
+}
+
+.autopoke[class*="svelte"] .autopoke-list[class*="svelte"] > div {
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.autopoke[class*="svelte"] .autopoke-list[class*="svelte"] > div > span {
+  display: inline-block;
+  padding-left: 6px;
+  text-transform: capitalize;
+}
+
+.autopoke[class*="svelte"]
+  .autopoke-list[class*="svelte"]
+  > .autocomplete-list-item {
+  color: white;
+  font-size: 12px;
+}
+
+.autopoke[class*="svelte"]
+  .autopoke-list[class*="svelte"]
+  > .autocomplete-list-item.selected {
+  color: white;
+  background: rgba(0, 0, 0, 0.34);
+  cursor: pointer;
+}
+
+.autopoke[class*="svelte"]:after {
+  display: none !important;
+} */

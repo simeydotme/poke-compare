@@ -1,0 +1,457 @@
+.ball {
+  margin: 1px;
+  position: relative;
+  bottom: -9px;
+}
+
+.ball.flip {
+  transform: scaleX(-1);
+}
+
+.ball,
+.ball .sprite {
+  width: 41px;
+  height: 41px;
+  background-image: url(./pokeballs.png);
+  background-position: 0 0;
+  transform-origin: center bottom;
+}
+.ball:before,
+.ball .sprite:before {
+  content: "";
+  position: absolute;
+  left: 30%;
+  bottom: 8px;
+  width: 40%;
+  height: 3px;
+  border-radius: 100%;
+  background: black;
+  box-shadow: 0 1px 2px black;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.poke.ball,
+.poke.ball .sprite {
+  background-position-x: 0px;
+}
+
+.great.ball,
+.great.ball .sprite {
+  background-position-x: -41px;
+}
+
+.safari.ball,
+.safari.ball .sprite {
+  background-position-x: -82px;
+}
+
+.ultra.ball,
+.ultra.ball .sprite {
+  background-position-x: -123px;
+}
+
+.master.ball,
+.master.ball .sprite {
+  background-position-x: -164px;
+}
+
+.net.ball,
+.net.ball .sprite {
+  background-position-x: -205px;
+}
+
+.dive.ball,
+.dive.ball .sprite {
+  background-position-x: -246px;
+}
+
+.nest.ball,
+.nest.ball .sprite {
+  background-position-x: -287px;
+}
+
+.repeat.ball,
+.repeat.ball .sprite {
+  background-position-x: -328px;
+}
+
+.timer.ball,
+.timer.ball .sprite {
+  background-position-x: -369px;
+}
+
+.luxury.ball,
+.luxury.ball .sprite {
+  background-position-x: -410px;
+}
+
+.premier.ball,
+.premier.ball .sprite {
+  background-position-x: -451px;
+}
+
+.dusk.ball,
+.dusk.ball .sprite {
+  background-position-x: -492px;
+}
+
+.heal.ball,
+.heal.ball .sprite {
+  background-position-x: -533px;
+}
+
+.quick.ball,
+.quick.ball .sprite {
+  background-position-x: -574px;
+}
+
+.cherish.ball,
+.cherish.ball .sprite {
+  background-position-x: -615px;
+}
+
+.fast.ball,
+.fast.ball .sprite {
+  background-position-x: -656px;
+}
+
+.level.ball,
+.level.ball .sprite {
+  background-position-x: -697px;
+}
+
+.lure.ball,
+.lure.ball .sprite {
+  background-position-x: -738px;
+}
+
+.heavy.ball,
+.heavy.ball .sprite {
+  background-position-x: -779px;
+}
+
+.love.ball,
+.love.ball .sprite {
+  background-position-x: -820px;
+}
+
+.friend.ball,
+.friend.ball .sprite {
+  background-position-x: -861px;
+}
+
+.moon.ball,
+.moon.ball .sprite {
+  background-position-x: -902px;
+}
+
+.sport.ball,
+.sport.ball .sprite {
+  background-position-x: -943px;
+}
+
+.park.ball,
+.park.ball .sprite {
+  background-position-x: -984px;
+}
+
+.dream.ball,
+.dream.ball .sprite {
+  background-position-x: -1025px;
+}
+
+.beast.ball,
+.beast.ball .sprite {
+  background-position-x: -1066px;
+}
+
+.ball.open {
+  background-position-y: -400px;
+}
+
+.ball.side {
+  background-position-y: -360px;
+}
+
+.ball.roll {
+  animation: ball-roll 1s steps(1) infinite;
+}
+
+.ball.rock {
+  animation: ball-rock 1.22s steps(1) infinite;
+}
+
+@keyframes ball-roll {
+  0% {
+    background-position-y: 0;
+  }
+  12.5% {
+    background-position-y: -40px;
+  }
+  25% {
+    background-position-y: -80px;
+  }
+  37.5% {
+    background-position-y: -120px;
+  }
+  50% {
+    background-position-y: -160px;
+  }
+  62.5% {
+    background-position-y: -200px;
+  }
+  75% {
+    background-position-y: -240px;
+  }
+  87.5% {
+    background-position-y: -280px;
+  }
+  100% {
+    background-position-y: -320px;
+  }
+}
+
+@keyframes ball-rock {
+  0% {
+    background-position-y: 0;
+  }
+  8.33% {
+    background-position-y: -440px;
+  }
+  16.66% {
+    background-position-y: -480px;
+  }
+  25% {
+    background-position-y: -520px;
+  }
+  33.33% {
+    background-position-y: -480px;
+  }
+  41.66% {
+    background-position-y: -440px;
+  }
+  50% {
+    background-position-y: 0px;
+  }
+  58.33% {
+    background-position-y: -560px;
+  }
+  66.66% {
+    background-position-y: -600px;
+  }
+  75% {
+    background-position-y: -640px;
+  }
+  83.33% {
+    background-position-y: -600px;
+  }
+  91.66% {
+    background-position-y: -560px;
+  }
+  100% {
+    background-position-y: 0px;
+  }
+}
+.ball.bounce {
+  animation-name: bounce;
+}
+.ball.bounce:before {
+  animation-name: bounce-shadow;
+}
+.ball.bounce,
+.ball.bounce:before {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0) scaleY(0.75) scaleX(1.15);
+
+    animation-timing-function: ease-in;
+  }
+  10% {
+    transform: translateY(-10%) scaleY(1) scaleX(1);
+
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateY(-120%) scaleY(1.1) scaleX(0.95);
+
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateY(-10%) scaleY(1) scaleX(1);
+
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes bounce-shadow {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translateY(0) scaleY(1) scaleX(1);
+  }
+  10%,
+  90% {
+    opacity: 0;
+    transform: translateY(200%) scaleY(0.3) scaleX(0.3);
+  }
+}
+
+.ball.throw,
+.pkmn.exit .ball {
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-name: throw;
+  background: none;
+}
+.ball.throw:before,
+.pkmn.exit .ball:before {
+  display: none;
+}
+
+.ball.throw *,
+.pkmn.exit .ball *,
+.ball.throw .sprite:before,
+.pkmn.exit .ball .sprite:before {
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.ball.throw *,
+.pkmn.exit .ball * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ball.throw .x,
+.pkmn.exit .ball .x {
+  animation-name: throw-x;
+}
+
+.ball.throw .y,
+.pkmn.exit .ball .y {
+  animation-name: throw-y;
+}
+
+.ball.throw .sprite,
+.pkmn.exit .ball .sprite {
+  animation-duration: 2.5s;
+  animation-name: throw-sprite;
+  animation-timing-function: steps(1);
+}
+.ball.throw .sprite:before,
+.pkmn.exit .ball .sprite:before {
+  animation-name: throw-shadow;
+}
+
+@keyframes throw {
+  0%,
+  100% {
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  20%,
+  90% {
+    opacity: 1;
+  }
+}
+
+@keyframes throw-x {
+  0% {
+    transform: translateX(-240%);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateX(-45%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes throw-y {
+  0% {
+    transform: translateY(-140%) scaleY(1.05) scaleX(0.95);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateY(-6%) scaleY(0.95) scaleX(1.1);
+    animation-timing-function: ease-out;
+  }
+  75% {
+    transform: translateY(-50%) scaleY(1.05) scaleX(0.95);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0%) scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes throw-sprite {
+  0% {
+    background-position-y: -40px;
+  }
+  3% {
+    background-position-y: -80px;
+  }
+  6% {
+    background-position-y: -120px;
+  }
+  9% {
+    background-position-y: -160px;
+  }
+  12% {
+    background-position-y: -200px;
+  }
+  18% {
+    background-position-y: -240px;
+  }
+  23% {
+    background-position-y: -320px;
+  }
+  28% {
+    background-position-y: -360px;
+  }
+  35%,
+  90% {
+    background-position-y: -400px;
+  }
+  95% {
+    background-position-y: -320px;
+  }
+  100% {
+    background-position-y: -360px;
+  }
+}
+
+@keyframes throw-shadow {
+  0% {
+    opacity: 0;
+    transform: translateY(1px) scaleY(1) scaleX(1);
+    animation-timing-function: ease;
+  }
+  35%,
+  65%,
+  95% {
+    opacity: 0;
+    transform: translateY(200%) scaleY(0.3) scaleX(0.3);
+  }
+  52% {
+    opacity: 0.3;
+    transform: translateY(1px) scaleY(1) scaleX(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(1px) scaleY(1) scaleX(1);
+  }
+}
